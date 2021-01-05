@@ -14,6 +14,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func goToChatView(_ sender: Any) {
+        let layout = UICollectionViewFlowLayout()
+        let controller = ChatLogController(collectionViewLayout: layout)
+        controller.modalPresentationStyle = .fullScreen
+      present(controller, animated: true, completion: nil)
+    }
+    
 }
 
